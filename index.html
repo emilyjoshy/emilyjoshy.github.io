@@ -1,216 +1,393 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+ <!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>PORTFOLIO HOME PAGE</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PORTFOLIO</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 <style type="text/css">
-h1
-  {
-   text-align:center;
-   font-family:"Comic Sans MS", cursive; 
-   text-transform:uppercase;
-   text-shadow:3px 2px 4px orange;
-   color:#F00;
-   }
-
-
-h2
-{
-  text-align:center;
-  font-family:"Comic Sans MS", cursive;
-  color: #F00;
-  text-shadow:#0F6;
- }
- h3
-{
-  
-  font-family:"Comic Sans MS", cursive;
-  color: #F00;
-  text-shadow:#0F6;
- }
- 
-l
-{
-	font-family:"Comic Sans MS", cursive;
-	font-size:24px;
-	color:#093;
-	text-indent:150px;
-	text-align:justify;
-	text-shadow:#0F0;
-	line-height:1.3;
-	word-spacing:3px;
-	letter-spacing:1px;
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
 }
-n
-{font-family:"Comic Sans MS", cursive;
- color:#F00;
- margin-top:100px;
- margin-left:650px;
- font-size:24px;
+
+/*map-responsive*/
+
+.iframe-container {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height:800px ;
+    width: 100%;
 }
 
 
-p
-{  font-family:Verdana, Geneva, sans-serif;
-   color:#03F;
-  margin-top:-100px;
-  margin-left:200px;
- font-size:24px;
-}
-
- 
-.transbox
-{
- margin:30px;
- background-color:white;
-  opacity:.7;
-}
 
 
-body
+ body
 	{
-	  background-image:url(bk-image-1280-720.jpeg);
+	  background-image:url(bk-image-1.png);
+	  
 	  background-size:cover;
 	  background-position:center;
 	  background-attachment:fixed;
 	  
 	}
+
+
+
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+  }
+  /* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+/* instagram */
+.fa-instagram {
+  background: #55ACEE;
+  color: white;
+}
+/* google */
+.fa-google {
+  background:#C00;
+  color: white;
+}
+/*rounded */
+.fa {
+  padding: 10px;
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+
+
+<!--zooming code within container-->
+.panel .panel-body { position: relative; padding: 0 ; overflow: hidden; height: auto; }
+    .panel .panel-body  img {
+		 position: relative; padding: 0 ; overflow: hidden; height: auto;display: block; margin: 0; width: 100%; height: auto; 
+    transition: all 0.5s; 
+    -moz-transition: all 0.5s; 
+    -webkit-transition: all 0.5s; 
+    -o-transition: all 0.5s; 
+}
+
+.panel .panel-body .zoom:hover img { transform: scale(1.2); -ms-transform: scale(1.2); -webkit-transform: scale(1.2); -o-transform: scale(1.2); -moz-transform: scale(1.2); }  
+  
+  <!--Font type setting-->
+  p
+  {text-align:justify;
+    font-family:Arial, Helvetica, sans-serif;
+	 color:#FFF;
+  }
+  
+  p1
+  {text-align:justify;
+   font-family:Arial, Helvetica, sans-serif;
+    color:#FFF;
+  }
+  p2
+  {font-family:Arial, Helvetica, sans-serif;
+   color:#000;
+  }
+  p3
+  {font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+   color:#0CF;
+  }
+  <!--For Footer writing colour change-->
+   .er{color:#FFF}
+  .er:hover{ color:#900}
+  
+  <!--background image setting-->body
+   
+     
+    
 </style>
 </head>
-
 <body>
-<!--<img style="margin-left:300px" src="bk-image-1280-720.jpeg" width="1300" height="800"/>-->
 
-<marquee direction="left"; scrollamount=".7"><span style="font-size:large;color:#F00; font-family:'Comic Sans MS', cursive"> T H IS   P A G E   I S   U N D E R   C O N S T R U C T I O N   . . . . .  . .</span> </marquee>
+<!--nav- bar code-->
+
+<div>
+    <nav class="navbar navbar-default" style="background-color:#FFF; border-color:#666; ">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                
+            </button>
+            
+  <a href="#" class="navbar-brand" style="color:#FFF; font-family:Arial, Helvetica, sans-serif; font-size:16px"><img src="Images1/t-logo1.png"> </a></div>
+        <!-- Collection of nav links and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+ <li><a href="project-homepage1.html" style="color:#000; font-family:Arial, Helvetica, sans-serif;font-size:9px; margin-left:700px">
+ <h4>Home</h4>
+ </a></li>        
+         <li><a href="wildlife1.html" style="color:#000; font-family:Arial, Helvetica, sans-serif"><h4>About </h4></a></li>
+        <li><a href="food-n-drink.html" style="color:#000; font-family:Arial, Helvetica, sans-serif"><h4>Services </h4> </a></li>
+           <li><a href="places-to-stay1.html" style="color:#000; font-family:Arial, Helvetica, sans-serif"><h4>Work </h4></a></li>
+           <li><a href="contact1.html" style="color:#000; font-family:Arial, Helvetica, sans-serif"><h4>Testimonial </h4></a></li>
+           <li><a href="contact1.html" style="color:#000; font-family:Arial, Helvetica, sans-serif"><h4>Contact </h4></a></li>
+                      
+            </ul>
+            
+        </div>
+    </nav>
+</div>
+
+    
+    
+    <!-- jubotron-writing code 1-->
+    
+   <div class="container-fluid" style="margin-top:-20px">
+<div class="row">
+
+<div class="jumbotron"  style="background-color:transparent"  >
+
+<center><h4><p1>Hello, I'm </h4></center></p1>
+
+<p1>
+<h3><center>Emily Joshy <h3>
+<h4><center>I'm a front end web developer<h4> 
 
 
+</p1>
+</div>
+</div>
+</div> 
 
-<h1>HELLO  WORLD !</h1>
+<!-- zooming images within container code-->
 
-<l>Pizza is a savory dish of Italian origin, consisting of a usually round, flattened base of leavened wheat-based dough topped with tomatoes, cheese, and various other ingredients baked at a high temperature, traditionally in a wood-fired oven.
-</l> 
-<br />
+<br>
+<br>
+<br><br>
 
- <H2>OUR SPECIALITIES</H2>
+<!--
 
-<br />
+<div class="container-fluid" style="margin-top:-1px">
+<div class="jumbotron" style="background-color:transparent">
+        <div class="row">
+<div class="col-xs-12 col-md-4">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <a class="zoom">
+                <img src="Images1/hangingbridge-500-500.jpg"  class="img-responsive" alt="Nature Portfolio" />
+                <br><br>
+                <p2><H5>ADVENTURE</H5></p2>
+            </a>
+        </div>
+    </div>
+</div>
+     
+     <div class="col-xs-10 col-sm-6 col-md-4" >
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <a class="zoom">
+                <img src="Images1/tiger-500-500.jpg"  class="img-responsive" alt="Nature Portfolio" />
+                <br><br>
+                <!--wildlife achor tag
+                
+                <a href ="wildlife1.html"><p2  class="er">WILDLIFE</p2></a><br>
+                
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-xs-10 col-sm-6 col-md-4">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <a class="zoom">
+                <img src="Images1/chembra-500-500.jpg" class="img-responsive"  alt="Nature Portfolio" />
+                <br><br>
+                <p2><H5>SCENERY</H5></p2>
+                
+            </a>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<br><br><br>
+-->
+<!--end of pics wildlife adventure scenery-->
+<!-- jubotron-writing code -->
+   <div class="container-fluid" style="margin-top:-30px">
+<div class="row">
+
+<div class="jumbotron"  style="background-color:#003"  >
+<p1>
+<h4><center>Hello, I'm </h4></center>
+<center><h3><p1>Emily Joshy</h3></center>
+<h4><center>I'm a front end web developer.</h4></center>
+
+</p1>
+</div>
+</div>
+</div> 
 <br>
 
-<H2>  VEG PIZZAS </H2>
-<br />
-<br />
+<!--resort zooming pics-->
+<!--
 
-   <!-- <div class="container-fluid" style="margin-top:100px">
-      <div class="row">
-
-      <div class="col-md-3">
-      <img src="vegpizza1-300-250.jpg"   class="img-responsive"/>
-      </div>
-      
-      <div class="col-md-3">
-      <img src="vegpizza1-300-250.jpg"   class="img-responsive"/>
-       </div>
-      
-      <div class="col-md-3">
-      <img src="vegpizza1-300-250.jpg"  class="img-responsive"/>
+<div class="container-fluid" style="margin-top:-30px">
+<div class="jumbotron" style="background-color:transparent">
+        <div class="row">
+<div class="col-xs-12 col-md-4">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <a class="zoom">
+                <img src="Images1/the-windflower-resort-550-368.jpg" class="img-responsive" alt="Nature Portfolio" />
+                <br><br>
+                <p2><H5>THE WINDFLOWER RESORT</H5></p2>
+            </a>
         </div>
-        
-       <div class="col-md-3">
-      <img src="vegpizza1-300-250.jpg"  class="img-responsive"/>
-       </div>
-        
-      </div>
-      </div>  -->
+    </div>
+</div>
+     
+     <div class="col-xs-10 col-sm-6 col-md-4" >
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <a class="zoom">
+                <img src="Images1/vythiri-resort-550-365.jpg" class="img-responsive"  alt="Nature Portfolio" />
+                <br><br>
+                <!--wildlife achor tag
+                
+                <a href ="wildlife1.html"><p2  class="er">VYTHIRI VILLAGE RESORT</p2></a><br>
+                
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-xs-10 col-sm-6 col-md-4">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <a class="zoom">
+                <img src="Images1/wayanad-silver-woods-500-377.jpg" class="img-responsive" alt="Nature Portfolio" />
+                <br><br>
+                <p2><H5>WAYANAD SILVER WOODS RESORT</H5></p2>
+                
+            </a>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</div> 
+<br><br><br> 
+  -->                    
+
+<!--footer  code -->
+<!--
+<div class="container-fluid" style="margin-top:-29px; background-color:#036">
+<div class="row">
+
+<div class="col-md-4">
+
+<h3><p3>A B O U T .. U S</h3></p3>
+<h5><p1>We Give you an experience to bring your soul </h5></p1>
+
+<h5><p1>back to nature and immerse into the magic of</h5></p1>
+ <h5><p1>woods and challenge us to rediscover the joy</h5></p1> 
+ <h5><p1>and pleasure of adventure and solitude.</h5></p1>
+
+</div>
+<div class="col-md-3">
+<H3><p3>WE  ARE  LOCATED  AT<h3></p3>
+<h5><p1>4th Floor,Kalpaka Bldg<h5><p1>
+<h5><p1>Railway station Road<h5><p1>
+<h5><p1>Kozhikode-673010<h5></h5><p1>
+
+</div>
+<div class="col-md-2">
+
+<h3><p3>C O N T A C T</h3></p3>
+<h5><p1>Office : 0495-2345678<h5><p1>
+<h5><p1>Mobile : 9876543210<h5><p1>
+
+</div>
+
+<div class="col-md-3">
+<h3><p3>We  are  social</h3></p3>
+
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+<a href="#" class="fa fa-instagram"></a>
+
+
+
+</div>
+</div>
+
+<!--map code-->
+
+<!-- <div class="container-fluid" style="margin-top:-29px; background-color:#369">
+<div class="row">
+
+<div class="col-xs-12"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.115990614884!2d75.77731231480499!3d11.252876991999306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba659393686a527%3A0xf628f6817f2ea572!2sBLUBAY+SOLUTIONS!5e0!3m2!1sen!2sin!4v1552219129531" width="1450" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+</div>
+</div>
+</div>  
+
+<br><br>
+<div class="col-md-12">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3913.1159906148846!2d75.77731231435541!3d11.252876991999253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba659393686a527%3A0xf628f6817f2ea572!2sBlubay+Solutions!5e0!3m2!1sen!2sin!4v1522915217451" width="90%" height="300px" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+-->
 
 
 
 
-<img src="vegpizza1-300-250.jpg"  class="img-responsive" alt="pic of pizza3" title=""/>
-<img src="vegpizza1-300-250.jpg"  class="img-responsive" alt="pic of pizza4" title=""/>
-<img src="vegpizza1-300-250.jpg"  class="img-responsive" alt="pic of pizza5" title="" />
-<img src="vegpizza1-300-250.jpg" class="img-responsive" alt="pic of pizza6" title=""/>  
 
-
-<H3 style="margin-left:20px">FARM HOUSE FRESH   CHEESE N CORN  PANEER DELIGHT    <h3>
-<!--<h3 style="margin-left:50px " > CHEESE N CORN  <h3>
-<h3 style="margin-left:80px">PANEER DELIGHT<h3>-->
-
-<!--<H3 style="margin-top:-50px; margin-left:970px"> VEG EXTRAVAGANZA<h3>-->
-
-<br />
-
-<H2> NON  VEG  PIZZAS </H2>
-
-
-<img src="chickenbbq-pizza.jpg" width="300" height="200" alt="pic of pizza3" title=""/>
-<img src="chickentikka-pizza.jpg" width="300" height="200" alt="pic of pizza4" title=""/>
-<img src="seafood-pizza.jpg" width="300" height="200" alt="pic of pizza5" title="" />
-<img src="pepperoni-pizza.jpg" width="300" height="200"/>
-
-<H3 style="margin-left:20px">BBQ CHICKEN   <h3>
-<h3 style="margin-top:-50px;margin-left:340px " > CHICKEN TIKKA  <h3>
-<h3 style="margin-top:-41px;margin-left:650px"> SEAFOOD DELIGHT <h3>
-<H3 style="margin-top:-50px; margin-left:970px"> PEPPERONI <h3>
-
-
-<br />
-<br />
-<br />
-
-<H2>  S T A R T E R S  </H2>
-<br />
-
-<img src="paneer.jpg"  width="300" height="200" alt="pic of pizza3" title=""/>
-<img src="seafoodstarter.jpg" width="300" height="200" alt="pic of pizza4" title=""/>
-<img src="chickenstarter.jpg" width="300" height="200" alt="pic of pizza5" title="" />
-<img src="tikkakabab.jpg" width="300" height="200" />
-
-<H3 style="margin-left:20px"> PANEER TIKKA   <h3>
-<h3 style="margin-top:-50px;margin-left:340px " > SEAFOOD STARTER <h3>
-<h3 style="margin-top:-41px;margin-left:650px">CHICKEN TANDOORI<h3>
-<H3 style="margin-top:-50px; margin-left:970px"> TIKKA KABAB<h3>
-
-
-<br />
-<br />
-
-<img style="margin-right:700px" src="rest.png" width="200"  height="200" />
-
-<H4 style="margin-top:-150px;margin-left:220px" >P I Z Z A   C O R N E R</H4>
-<H4 style="margin-left:220px" >K A N N U R  R O A D</H4>
-<H4 style="margin-left:220px" >C A L I C U T</H4>
-
-
-
-
-<form method="post" action="#">
-<table style="margin-top:-150px;margin-left:500px" align="center" width="500" cellpadding="15" cellspacing="15" bgcolor="grey">
-
-<tr><td style="color:#FFF"  colspan="2"> <center>Enquire Now </center>
-</td></tr>
-
-<tr><td bgcolor="black" style="color:#FFF" >NAME </td><td><input type="text"</td></td></tr>
-<tr><td bgcolor="black" style="color:#FFF">EMAIL </td> <td><input type="email" </td></tr>
-<tr><td bgcolor="black" style="color:#FFF">PHONE NO:</td><td>  <input type="number" class="hg"</td></tr>
-
- <tr><td bgcolor="#000000" style="color:#FFF">Your message here:<textarea rows="5" cols="24"></textarea></td></tr>
-
-<tr><td></td><td bgcolor="Red" style="color:#F00"><input type="submit" value="SUBMIT" class="hg"</td></tr>
-
-</table>
-
-
-
-
-
-
-<BR/>
-
-<br />
-<br />
-
-
-
-
+   
 </body>
-</html>
+</html>                            
